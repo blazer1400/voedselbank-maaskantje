@@ -33,7 +33,7 @@
     <!-- categorie section met alle categorien erin -->
     <div class="w-full flex flex-wrap flex-row justify-evenly items-center ">
   <div class="flex flex-col my-5 space-y-2">
-    <a href="files/aardappel-groente-fruit.php">
+    <a href="../files/aardappel-groente-fruit.php">
       <div class="bg-white p-10 flex flex-col  items-center shadow-lg shadow-black hover:bg-green-500">
       <span class="h-28 w-36">
         <img src="img/overzichtproduct/aardappel-groente-fruit.png" alt="foto van aardappel-groente-fruit">
@@ -42,7 +42,7 @@
     </div>
   </a>
 
-  <a href="files/kaas-vleeswaren.php">
+  <a href="../files/kaas-vleeswaren.php">
     <div class="bg-white p-10 flex flex-col  items-center shadow-lg shadow-black hover:bg-green-500">
       <span class="h-28 w-36">
         <img src="img/overzichtproduct/kaas-vleeswaren.png" alt="foto van kaas-vleeswaren">
@@ -51,7 +51,7 @@
     </div>
     </a>
 
-    <a href="files/zuivel.php">
+    <a href="../files/zuivel.php">
     <div class="bg-white p-10 flex flex-col items-center shadow-lg shadow-black hover:bg-green-500">
       <span class="h-28 w-36">
         <img src="img/overzichtproduct/zuivel-plantaardig-eieren.png" alt="foto van zuivel-plantaardig-eieren">
@@ -64,7 +64,7 @@
    
  <div class="flex flex-col my-5 space-y-2"> 
  
-<a href="files/bakkerij.php">
+<a href="../files/bakkerij.php">
     <div class="bg-white p-10 flex flex-col  items-center shadow-lg shadow-black hover:bg-green-500">
       <span class="h-28 w-36">
         <img src="img/overzichtproduct/bakkerij-banket.png" alt="foto van bakkerij-banket">
@@ -73,7 +73,7 @@
     </div>
     </a>
 
-    <a href="files/frisdrank.php">
+    <a href="../files/frisdrank.php">
     <div class="bg-white p-10 flex flex-col  items-center shadow-lg shadow-black hover:bg-green-500">
       <span class="h-28 w-36">
         <img src="img/overzichtproduct/frisdrank-sappen-koffie-thee.png" alt="foto van frisdrank-sappen-koffie-thee">
@@ -82,7 +82,7 @@
     </div>
     </a>
 
-    <a href="files/wereldkeuken.php">
+    <a href="../files/wereldkeuken.php">
     <div class="bg-white p-10 flex flex-col  items-center shadow-lg shadow-black hover:bg-green-500">
       <span class="h-28 w-36">
         <img src="img/overzichtproduct/pasta-rijst-wereldkeuken.png" alt="foto van pasta-rijst-wereldkeuken">
@@ -93,7 +93,7 @@
     </div>  
     
     <div class="flex flex-col my-5 space-y-2">
-    <a href="files/snoep.php">
+    <a href="../files/snoep.php">
     <div class="bg-white p-10 flex flex-col  items-center shadow-lg shadow-black hover:bg-green-500">
       <span class="h-28 w-36">
         <img src="img/overzichtproduct/snoep-koek-chips-chocolade.png" alt="foto van snoep-koek-chips-chocolade">
@@ -102,7 +102,7 @@
     </div>
     </a>
 
-    <a href="files/snoep.php">
+    <a href="../files/snoep.php">
     <div class="bg-white p-10 flex flex-col  items-center shadow-lg shadow-black hover:bg-green-500">
       <span class="h-28 w-36">
         <img src="img/overzichtproduct/soepen-sauzen-kruiden-olie.png" alt="foto van soepen-sauzen-kruiden-olie">
@@ -111,10 +111,10 @@
     </div>
     </a>
    
-    <a href="files/hygiëne.php">
+    <a href="../files/hygiëne.php">
     <div class="bg-white p-10 flex flex-col  items-center shadow-lg shadow-black hover:bg-green-500">
       <span class="h-28 w-36">
-        <img src="img/overzichtproduct/baby-verzorging-hygiëne.png" alt="foto van baby-verzorging-hygiëne">
+        <img src="php/img/overzichtproduct/baby-verzorging-hygiëne.png" alt="foto van baby-verzorging-hygiëne">
       </span>
       <span><p class="font-medium text-base text-center">Baby, verzorging,hygiëne</p></span>
     </div>
