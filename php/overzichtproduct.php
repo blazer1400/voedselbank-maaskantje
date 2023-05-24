@@ -31,12 +31,7 @@
   </nav>
 </header>
 
-
-
-  
-    
-          </header>
-          <body class="bg-green-200 w-full h-screen">
+<body class="bg-green-200 w-full h-screen">
     </div class="flex flex-col">
     <!-- categorie section met alle categorien erin -->
     <div class="w-full flex flex-wrap flex-row justify-evenly items-center ">
