@@ -10,28 +10,37 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
 <header class="bg-green-200 w-full">
+  <!-- Nav Bar met een zoekbalk -->
+  <nav class="bg-green-200 text-white flex flex-col sm:flex-row justify-between items-center py-3 px-5">
+    <div class="flex items-center">
+      <h1 class="text-2xl sm:text-xl font-bold text-green-500">Maaskantje</h1>
+      <a href="/" class="text-lg sm:text-base text-green-500 font-bold py-2 px-5 rounded hover:underline">
+        Home
+      </a>
+    </div>
+    <div class="flex items-center flex-grow sm:flex-initial sm:ml-5 space-x-0 mt-4 sm:mt-0 flex-1">
+      <div class="flex justify-center">
+        <input type="text" placeholder="Zoek EAN..." class="px-4 py-2 border border-gray-300 rounded-l text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
+        <button class="px-4 py-2 bg-green-500 text-white rounded-l-none rounded-r">Zoek</button>
+      </div>
+    </div>
+    <div class="flex items-center space-x-5 mt-4 sm:mt-0">
+      <a href="#"><i class="uil uil-user text-green-500 text-xl hover:underline"></i></a>
+      <h2 class="text-green-500 rounded py-3 px-5">User Name</h2>
+    </div>
+  </nav>
+</header>
 
-  <div class="flex flex-col items-center justify-start pt-10">
+
+
   
-    <div class="w-11/12 md:w-8/12 x1:w-1/2 h-auto p-5 rounded-3xl bg-white flex flex-col">
-        <!-- Dit is de eerste section voor de zoekbalk -->
-          <section class="w-full h-10 flex items-center ">
-        <!-- plaatjes voor zoekbalk container -->
-        <span class="w-10 h-full hidden md:flex items-center">
-        <i class="uil uil-search text-xl text-green-800"></i>
-        </span>
-        <!-- input type -->
-        <input type="text" class="w-full h-full font-meduim 
-        md:pl-2 focus:outline-none" placeholder="Zoek streepjescode ....">
-        <!-- zoek knop -->
-        <button class="w-28 h-full bg-green-800 flex justify-center items-center rounded-2xl text-white
-         font-medium">Zoeken</button>
-          </section>
+    
           </header>
           <body class="bg-green-200 w-full h-screen">
     </div class="flex flex-col">
     <!-- categorie section met alle categorien erin -->
     <div class="w-full flex flex-wrap flex-row justify-evenly items-center ">
+    
   <div class="flex flex-col my-5 space-y-2">
     <a href="../files/aardappel-groente-fruit.php">
       <div class="bg-white p-10 flex flex-col  items-center shadow-lg shadow-black hover:bg-green-500">
