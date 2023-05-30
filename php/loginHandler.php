@@ -8,6 +8,7 @@ $query = $dbConnection->query("SELECT * FROM users WHERE username='" . $_POST['u
 
 $row = mysqli_fetch_assoc($query);
 if ($row) {
+    $_SESSION['user'] = $row;
     header('location: ../dashboard.php');
 } else {
     $_SESSION['error'] = 'Gebruikersnaam of wachtwoord onjuist';

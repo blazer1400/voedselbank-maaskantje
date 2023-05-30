@@ -20,13 +20,17 @@
 
         session_start();
 
+        if (!empty($_SESSION['user'])) {
+            header('location: ./dashboard.php');
+        }
+
         if (!empty($_SESSION['error'])) {
             echo "<div class='bg-red-500 w-96 m-auto my-4 p-2 rounded'>
             <p>" . $_SESSION['error'] . "</p>
         </div>";
         }
 
-        $_SESSION['error'] = null
+        $_SESSION['error'] = null;
 
         ?>
 

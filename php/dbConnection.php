@@ -1,11 +1,15 @@
 <?php
 
-$host = 'localhost';
-$username = 'root';
-$password = '';
-$db = 'voedselbank_maaskantje';
+function setDb() {
+    $host = 'localhost';
+    $username = 'root';
+    $password = '';
+    $db = 'voedselbank_maaskantje';
 
-$dbConnection = new mysqli($host, $username, $password, $db);
+    return new mysqli($host, $username, $password, $db);
+}
+
+$dbConnection = setDb();
 
 if ($dbConnection->error) {
     die($dbConnection->error);
