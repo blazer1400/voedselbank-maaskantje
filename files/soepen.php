@@ -1,25 +1,25 @@
 <?php
-// Database credentials
+// Databasereferenties
 $host = 'localhost';
 $dbName = 'maaskantje';
 $username = 'root';
 $password = '';
 
-// Specify the category to filter
-$category = 'soepen'; // Change this to the desired category
+// Geef de categorie op om te filteren
+$category = 'soepen'; // Wijzig dit in de gewenste categorie
 
 try {
-  // Create a new PDO instance
+  // Maak een nieuwe PDO-instantie aan
   $db = new PDO("mysql:host=$host;dbname=$dbName;charset=utf8", $username, $password);
 
-  // Set PDO error mode to exception
+  // Stel de PDO-fout 
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  // Fetch data from the database based on the category
+  // Gegevens ophalen uit de database op categorie
   $stmt = $db->query("SELECT `EAN Nummer`, `Aantal producten`, `Omschrijving`, `Productnaam`, `categorie` FROM `productvoorraad` WHERE `categorie` = '$category'");
   $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
-  // If there's an error in the connection or database operation, handle it here
+  // Als er een fout is opgetreden in de verbinding of databasebewerking.
   echo 'Error: ' . $e->getMessage();
 }
 ?>
@@ -61,6 +61,7 @@ try {
     <button class="bg-green-800 border border-green-800 rounded px-3 py-2 hover:bg-green-500 hover:border-green-500">
       <a href="../php/addproduct.php" class="text-white font-mono">+ Add new</a>
     </button>
+  
   </div>
   <div class="flex justify-center items-start h-screen">
     <div class="p-5">
@@ -69,6 +70,7 @@ try {
   <table class="w-full">
     <thead class="bg-gray-50 border-b-2 border-gray-200">
       <tr>
+      <th class="p-3 text-sm font-semibold tracking-wide text-left">update</th>
         <th class="p-3 text-sm font-semibold tracking-wide text-left">Streepjescode</th>
         <th class="p-3 text-sm font-semibold tracking-wide text-left">Aantal producten</th>
         <th class="p-3 text-sm font-semibold tracking-wide text-left">Product omschrijving</th>
@@ -76,32 +78,39 @@ try {
       </tr>
     </thead>
     <tbody class="divide-y divide-gray-100">
-      <?php if (!empty($products)): ?>
-        <?php foreach ($products as $product): ?>
-          <tr class="bg-white">
-            <td class="w-24 p-3 text-sm text-gray-700 whitespace-nowrap">
-              <a href="#" class="font-bold text-blue-500"><?= $product['EAN Nummer']; ?></a>
-            </td>
-            <td class="w-30 p-3 text-sm text-gray-700 whitespace-nowrap"><?= $product['Aantal producten']; ?></td>
-            <td class="w-42 p-3 text-sm text-gray-700 whitespace-nowrap"><?= $product['Omschrijving']; ?></td>
-            <td class="w-24 p-3 text-sm text-gray-700 whitespace-nowrap"><?= $product['Productnaam']; ?></td>
-          </tr>
-        <?php endforeach; ?>
-      <?php else: ?>
-        <tr>
-          <td colspan="4" class="p-3 text-sm text-gray-700">No products found.</td>
-        </tr>
-      <?php endif; ?>
-    </tbody>
+  <?php if (!empty($products)): ?>
+    <?php foreach ($products as $product): ?>
+      <tr class="bg-white hover:bg-gray-100 cursor-pointer" onclick="window.location.href = '../php/updateproduct.php?id=<?= $product['EAN Nummer']; ?>'">
+        <td class="w-16 p-3 text-sm text-gray-700 whitespace-nowrap">
+          <a href="../php/updateproduct.php?id=<?= $product['EAN Nummer']; ?>">
+            Update
+          </a>
+        </td>
+        <td class="w-24 p-3 text-sm text-gray-700 whitespace-nowrap">
+          <a href="#" class="font-bold text-blue-500"><?= $product['EAN Nummer']; ?></a>
+        </td>
+        <td class="w-30 p-3 text-sm text-gray-700 whitespace-nowrap"><?= $product['Aantal producten']; ?></td>
+        <td class="w-42 p-3 text-sm text-gray-700 whitespace-nowrap"><?= $product['Omschrijving']; ?></td>
+        <td class="w-24 p-3 text-sm text-gray-700 whitespace-nowrap"><?= $product['Productnaam']; ?></td>
+      </tr>
+    <?php endforeach; ?>
+  <?php else: ?>
+    <tr>
+      <td colspan="5" class="p-3 text-sm text-gray-700">Geen producten gevonden.</td>
+    </tr>
+  <?php endif; ?>
+</tbody>
   </table>
 </div>
-      <!-- Responsive grid layout for small screens -->
+      <!-- als je het beeld kleiner maakt -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:hidden">
         <?php foreach ($products as $product): ?>
           <div class="bg-white space-y-3 p-4 rounded-lg shadow">
             <div class="flex items-center space-x-2 text-sm">
-              <div>
-                <a href="#" class="text-blue-500 font-bold hover:underline"><?= $product['EAN Nummer']; ?></a>
+            <div class="text-sm font-medium text-black">
+                <a href="../php/updateproduct.php?id=<?= $product['EAN Nummer']; ?>" class="text-green-500 hover:underline">
+                  Update
+                </a>
               </div>
               <div class="text-gray-500"><?= $product['Aantal producten']; ?></div>
               <div class="text-sm text-gray-500"><?= $product['Omschrijving']; ?></div>
