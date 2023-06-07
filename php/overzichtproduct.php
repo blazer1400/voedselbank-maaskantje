@@ -20,12 +20,7 @@
     
     </div>
     
-  <div class="flex items-center flex-grow sm:flex-initial sm:ml-5 space-x-0 mt-4 sm:mt-0 flex-1">
-      <div class="flex justify-center">
-        <input type="text" placeholder="Zoek EAN..." class="px-4 py-2 border border-gray-300 rounded-l text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
-        <button class="px-4 py-2 bg-green-500 text-white rounded-l-none rounded-r">Zoek</button>
-      </div>
-    </div>
+  
     <div class="flex items-center space-x-5 mt-4 sm:mt-0">
       <a href="#"><i class="uil uil-user text-green-500 text-xl hover:underline"></i></a>
       <h2 class="text-green-500 rounded py-3 px-5">User Name</h2>
