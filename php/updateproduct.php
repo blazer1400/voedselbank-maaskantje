@@ -1,12 +1,12 @@
 <?php
-// Databasereferenties
+// Database
 $host = 'localhost';
 $dbName = 'maaskantje';
 $username = 'root';
 $password = '';
 
 try {
-  // Maak een nieuwe PDO-instantie aan
+  // Maak een nieuwe PDO aan
   $db = new PDO("mysql:host=$host;dbname=$dbName;charset=utf8", $username, $password);
 
   // Stel de PDO-fout
@@ -14,18 +14,18 @@ try {
 
   // Controleer of het formulier is ingediend
   if (isset($_POST['update'])) {
-    // Haal de waarden op uit het formulier
+    // zorgt dat het de waarde haalt uit de formulier
     $ean = $_POST['EAN'];
     $aantal = $_POST['aantal_producten'];
     $omschrijving = $_POST['omschrijving'];
   
     $productnaam = $_POST['productnaam'];
 
-    // Bereid de SQL-query voor met parameterbindings
+    // is de sql om de gegevens te updaten
     $query = "UPDATE `productvoorraad` SET `Aantal producten` = :aantal, `Omschrijving` = :omschrijving, `Productnaam` = :productnaam WHERE `EAN Nummer` = :ean";
     $stmt = $db->prepare($query);
 
-    // Bind de parameterwaarden aan de query
+    // Bind de parameter aan de query
     $stmt->bindParam(':ean', $ean);
     $stmt->bindParam(':aantal', $aantal);
     $stmt->bindParam(':omschrijving', $omschrijving);
@@ -35,7 +35,7 @@ try {
     // Voer de query uit
     $stmt->execute();
 
-    // Redirect naar een andere pagina na het updaten van het product
+    // gaat naar de pagina als de update en alles is goed gegaan
     header('Location: overzichtproduct.php');
     exit();
   }
@@ -48,7 +48,7 @@ try {
   $stmt->execute();
   $product = $stmt->fetch(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
-  // Als er een fout is opgetreden in de verbinding of databasebewerking.
+  // Als er een fout is opgetreden in de verbinding of database.
   echo 'Error: ' . $e->getMessage();
 }
 ?>

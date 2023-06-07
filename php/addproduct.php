@@ -1,44 +1,44 @@
 <?php
-// Database credentials
+// Database c
 $host = 'localhost';
 $dbName = 'maaskantje';
 $username = 'root';
 $password = '';
 
 try {
-  // Create a new PDO instance
+  // maakt een nieuwe pdo
   $db = new PDO("mysql:host=$host;dbname=$dbName;charset=utf8", $username, $password);
 
-  // Set PDO error mode to exception
+  // Stel de PDO-foutmodus in op uitzondering
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Retrieve form data
+    // geeft de data terug
     $ean = $_POST['EAN'];
     $amount = $_POST['aantal_producten'];
     $description = $_POST['omschrijving'];
     $category = $_POST['categorie'];
     $productName = $_POST['productnaam'];
 
-    // Prepare the SQL statement
+    // zorgt voor de sql statement om producten toetevoegen
     $stmt = $db->prepare("INSERT INTO `productvoorraad` (`EAN Nummer`, `Productnaam`, `Omschrijving`, `Categorie`, `Aantal producten`) VALUES (:ean, :productName, :description, :category, :amount)");
 
-    // Bind the parameters
+    // bind de parameters
     $stmt->bindParam(':ean', $ean);
     $stmt->bindParam(':amount', $amount);
     $stmt->bindParam(':description', $description);
     $stmt->bindParam(':category', $category);
     $stmt->bindParam(':productName', $productName);
 
-    // Execute the statement
+    // zorgt ervoor dat hij de statement uitvoert
     $stmt->execute();
 
-    // Redirect to a success page or display a success message
+    // je gaat terug als deze pagina als alles goed is gegaan
     header("Location: overzichtproduct.php");
     exit;
   }
 } catch (PDOException $e) {
-  // If there's an error in the connection or database operation, handle it here
+  // als er iets mis is krijg je een error code
   echo 'Error: ' . $e->getMessage();
 }
 ?>
