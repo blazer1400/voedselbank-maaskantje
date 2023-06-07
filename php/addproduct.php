@@ -78,6 +78,7 @@ try {
           <option value="bakkerij">Bakkerij en banket</option>
           <option value="frisdrank">Frisdrank, sappen, koffie, thee</option>
           <option value="pasta">Pasta, rijst en wereldkeuken</option>
+          <option value="snoep">Snoep, koek, chips, chocolade</option>
           <option value="soepen">Soepen, sauzen, kruiden en olie</option>
           <option value="baby">Baby, verzorging, hygiëne</option>
         </select>
