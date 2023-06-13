@@ -1,7 +1,7 @@
 <?php
 // Databasereferenties
 $host = 'localhost';
-$dbName = 'maaskantje';
+$dbName = 'maaskantje123';
 $username = 'root';
 $password = '';
 
@@ -70,9 +70,7 @@ try {
 </header>
 <body class="bg-green-200 w-full h-screen">
   <div class="flex items-center justify-end mr-10">
-    <button class="bg-green-800 border border-green-800 rounded px-3 py-2 hover:bg-green-500 hover:border-green-500">
-      <a href="../php/addproduct.php" class="text-white font-mono">+ Add new</a>
-    </button>
+   
   </div>
   <div class="flex justify-center items-start h-screen">
     <div class="p-5">

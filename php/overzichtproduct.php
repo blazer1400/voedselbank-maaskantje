@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,6 +30,17 @@
 </header>
 
 <body class="bg-green-200 w-full h-screen">
+  
+<div class="flex items-center justify-end mr-10 mb-4">
+    <button class="bg-green-800 border border-green-800 rounded px-3 py-2 hover:bg-green-500 hover:border-green-500">
+      <a href="../php/addproduct.php" class="text-white font-mono">+ Add new</a>
+    </button>
+  </div>
+  <div class="flex items-center justify-end mr-10">
+    <button class="bg-green-800 border border-green-800 rounded px-3 py-2 hover:bg-green-500 hover:border-green-500">
+      <a href="../php/changecategorie.php" class="text-white font-mono">Verander Category</a>
+    </button>
+  </div>
   
     </div class="flex flex-col">
     <!-- categorie section met alle categorien erin -->
@@ -104,7 +116,7 @@
     </div>
     </a>
 
-    <a href="../files/snoep.php">
+    <a href="../files/soepen.php">
     <div class="bg-white p-10 flex flex-col  items-center shadow-lg shadow-black hover:bg-green-500">
       <span class="h-28 w-36">
         <img src="../img/imgproduct/soepen-sauzen-kruiden-olie.png" alt="foto van soepen-sauzen-kruiden-olie">
