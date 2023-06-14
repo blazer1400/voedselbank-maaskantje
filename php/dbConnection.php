@@ -4,7 +4,7 @@ function setDb() {
     $host = 'localhost';
     $username = 'root';
     $password = '';
-    $db = 'maaskantje123';
+    $db = 'voedselbank_maaskantje';
 
     return new mysqli($host, $username, $password, $db);
 }

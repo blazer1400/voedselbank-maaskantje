@@ -109,7 +109,7 @@
     <div class="rounded bg-white shadow-lg p-6 relative">
         <p class="absolute top-4 right-4 cursor-pointer" onclick="closeEditUser()">X</p>
         <p id="title" class="text-xl font-bold"></p>
-        <form class="mt-4" method="post" action="./php/editUserHandler">
+        <form class="mt-4" method="post" action="../php/editUserHandler">
             <input id="id" name="id" type="hidden" />
             <label class="block">
                 Gebruikersnaam:
@@ -153,7 +153,7 @@
     function deleteUser(id) {
         const response = confirm('Weet u zeker dat u dit wilt verwijderen')
         if (response) {
-            window.location = './php/removeUserHandler?id=' + id
+            window.location = '../php/removeUserHandler?id=' + id
         }
     }
     function openEditUser(user) {
