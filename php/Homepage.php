@@ -25,9 +25,9 @@
         <nav class="flex flex-row gap-5">
           <a href="Homepage.php">Home</a>
           <a href="overzichtproduct.php">Productvoorraad</a>
-          <a href="Homepage.php">Leveranciers</a>
-          <a href="Homepage.php">Voedselpakket</a>
-          <a href="Homepage.php">Log in</a>
+          <a href="#">Leveranciers</a>
+          <a href="#">Voedselpakket</a>
+          <a class=" px-2 py-1 inline-block bg-green-500 text-white hover:bg-green-400 transition-colors  rounded" href="#">Log in</a>
         </nav>
       </div>
     </div>
