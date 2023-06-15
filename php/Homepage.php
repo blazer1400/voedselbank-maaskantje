@@ -8,7 +8,7 @@
 </head>
 <body>
   <!-- Hero Section -->
-  <section class="flex flex-col min-h-screen text-white bg-center bg-cover bg-blend-overlay bg-fixed bg-[url('../img/imghome/achtergrond.jpg')]">
+  <section class="flex flex-col min-h-screen text-white bg-slate-600 bg-center bg-cover bg-blend-overlay bg-fixed bg-[url('../img/imghome/achtergrond.jpg')]">
     <!-- Navbar -->
     <div class="flex items-center h-20">
       <!-- Navbar Container -->
@@ -37,7 +37,7 @@
       <div class="text-center mx-auto">
         <h1 class="text-6xl font-semibold">Welkom bij Voedselbank Maaskantje</h1>
         <p class="font-light text-3xl mt-5">Waar iedereen recht heeft op een stukje vlees</p>
-        <a class="px-5 py-2 inline-block bg-green-500 text-white hover:bg-green-400 transition-colors mt-10" href="#">
+        <a class="px-5 py-2 inline-block bg-green-500 text-white hover:bg-green-400 transition-colors mt-10 rounded" href="#">
            Stel pakket samen
         </a>
       </div>
