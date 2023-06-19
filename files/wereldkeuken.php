@@ -46,15 +46,18 @@ try {
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
 <header class="bg-green-200 w-full">
-  <!-- Nav Bar met een zoekbalk -->
-  <nav class="bg-green-200 text-white flex flex-col sm:flex-row justify-between items-center py-3 px-5">
-    <div class="flex items-center">
-      <h1 class="text-2xl sm:text-xl font-bold text-green-500">Maaskantje</h1>
-      <a href="/" class="text-lg sm:text-base text-green-500 font-bold py-2 px-5 rounded hover:underline">
-        Home
-      </a>
-    </div>
-    <div class="flex items-center flex-grow sm:flex-initial sm:ml-5 space-x-0 mt-4 sm:mt-0 flex-1">
+    <!-- Navbar -->
+    <div class="flex items-center h-20">
+      <!-- Navbar Container -->
+      <div class="mx-auto relative px-5 max-w-screen-xl w-full flex flex-wrap items-center justify-end">
+        <!-- Navbar Logo -->
+        <div class="absolute left-0 flex flex-row">
+          <img class="h-10 hidden md:inline-block" src="../img/imghome/Logo.png" alt="het logo van voedselbank maaskantje">
+          <div class="text-3xl font-light uppercase ml-2">
+            <span class="hidden md:inline-block">Maaskantje</span>
+          </div>
+        </div>
+    <div class="flex items-center flex-grow sm:flex-initial sm:ml-5 space-x-0 mt-4 sm:mt-0 flex-1 mr-20">
       <form method="GET" action="">
         <div class="flex justify-center">
           <input type="text" name="search" placeholder="Zoek EAN..." class="px-4 py-2 border border-gray-300 rounded-l text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent" value="<?= $search ?>">
@@ -62,11 +65,16 @@ try {
         </div>
       </form>
     </div>
-    <div class="flex items-center space-x-5 mt-4 sm:mt-0">
-      <a href="#"><i class="uil uil-user text-green-500 text-xl hover:underline"></i></a>
-      <h2 class="text-green-500 rounded py-3 px-5">User Name</h2>
+<!-- Navbar Menu -->
+        <nav class="flex flex-row gap-5">
+          <a href="Homepage.php">Home</a>
+          <a href="overzichtproduct.php">Productvoorraad</a>
+          <a href="#">Leveranciers</a>
+          <a href="overzichtklant.php">klanten</a>
+          <a class=" px-2 py-1 inline-block bg-green-500 text-white hover:bg-green-400 transition-colors  rounded" href="#">Log in</a>
+        </nav>
+      </div>
     </div>
-  </nav>
 </header>
 <body class="bg-green-200 w-full h-screen">
  

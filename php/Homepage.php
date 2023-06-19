@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>homepage</title>
+  <title>Voedselbank maaskantje</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="../img/imghome/Logo.png">
 </head>
 <body>
   <!-- Hero Section -->
@@ -26,7 +27,7 @@
           <a href="Homepage.php">Home</a>
           <a href="overzichtproduct.php">Productvoorraad</a>
           <a href="#">Leveranciers</a>
-          <a href="#">Voedselpakket</a>
+          <a href="overzichtklant.php">klanten</a>
           <a class=" px-2 py-1 inline-block bg-green-500 text-white hover:bg-green-400 transition-colors  rounded" href="#">Log in</a>
         </nav>
       </div>
