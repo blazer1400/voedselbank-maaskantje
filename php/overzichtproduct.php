@@ -40,12 +40,12 @@
   
 <div class="flex items-center justify-end mr-10 mb-4">
     <button class="bg-green-800 border border-green-800 rounded px-3 py-2 hover:bg-green-500 hover:border-green-500">
-      <a href="../php/addproduct.php" class="text-white font-mono">+ Product</a>
+      <a href="../productvoorraad/addproduct.php" class="text-white font-mono">Voeg product</a>
     </button>
   </div>
   <div class="flex items-center justify-end mr-10">
     <button class="bg-green-800 border border-green-800 rounded px-3 py-2 hover:bg-green-500 hover:border-green-500">
-      <a href="../php/changecategorie.php" class="text-white font-mono">+ Categorie</a>
+      <a href="../productvoorraad/changecategorie.php" class="text-white font-mono">Voeg categorie</a>
     </button>
   </div>
   

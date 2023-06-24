@@ -67,10 +67,10 @@ try {
     </div>
 <!-- Navbar Menu -->
         <nav class="flex flex-row gap-5">
-          <a href="Homepage.php">Home</a>
-          <a href="overzichtproduct.php">Productvoorraad</a>
+          <a href="../php/Homepage.php">Home</a>
+          <a href="../php/overzichtproduct.php">Productvoorraad</a>
           <a href="#">Leveranciers</a>
-          <a href="overzichtklant.php">klanten</a>
+          <a href="../php/overzichtklant.php">klanten</a>
           <a class=" px-2 py-1 inline-block bg-green-500 text-white hover:bg-green-400 transition-colors  rounded" href="#">Log in</a>
         </nav>
       </div>
@@ -96,7 +96,7 @@ try {
           <tbody class="divide-y divide-gray-100">
             <?php if (!empty($products)): ?>
               <?php foreach ($products as $product): ?>
-                <tr class="bg-white hover:bg-gray-100 cursor-pointer" onclick="window.location.href = '../php/updateproduct.php?id=<?= $product['EAN Nummer']; ?>'">
+                <tr class="bg-white hover:bg-gray-100 cursor-pointer" onclick="window.location.href = '../productvoorraad/updateproduct.php?id=<?= $product['EAN Nummer']; ?>'">
                   <td class="w-16 p-3 text-sm text-gray-700 whitespace-nowrap">
                     <a href="../php/updateproduct.php?id=<?= $product['EAN Nummer']; ?>">
                       Update
@@ -123,7 +123,7 @@ try {
           <div class="bg-white space-y-3 p-4 rounded-lg shadow">
             <div class="flex items-center space-x-2 text-sm">
               <div class="text-sm font-medium text-black">
-                <a href="../php/updateproduct.php?id=<?= $product['EAN Nummer']; ?>" class="text-green-500 hover:underline">
+                <a href="../productvoorraad/updateproduct.php?id=<?= $product['EAN Nummer']; ?>" class="text-green-500 hover:underline">
                   Update
                 </a>
               </div>

@@ -56,7 +56,7 @@ try {
     $stmt->execute();
 
     // Ga terug naar de overzichtklant.php pagina als alles goed is gegaan
-    header("Location: overzichtklant.php");
+    header("Location: ../php/overzichtklant.php");
     exit;
   }
 } catch (PDOException $e) {
@@ -133,29 +133,29 @@ try {
       <div class="mb-6">
         <label for="gezinssamenstelling" class="block text-gray-700 text-sm font-bold mb-2">Gezinssamenstelling:</label>
         <select name="gezinssamenstelling" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-green-500" onchange="toggleInputs.call(this)">
-          <option value="Alleenstaand">Alleenstaand</option>
-          <option value="Gezin zonder kinderen">Gezin zonder kinderen</option>
           <option value="Gezin met kinderen">Gezin met kinderen</option>
+          <option value="Gezin zonder kinderen">Gezin zonder kinderen</option>
+     
         </select>
       </div>
       <!-- Aantal volwassenen -->
       <div class="mb-6">
         <label for="volwassen" class="block text-gray-700 text-sm font-bold mb-2">Aantal volwassenen:</label>
-        <input type="number" name="volwassen" min="0" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-green-500">
+        <input type="number" name="volwassen" min="0" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-green-500" value="0">
       </div>
       <!-- Aantal kinderen -->
       <div class="mb-6" id="kinderenDiv">
         <label for="kinderen" class="block text-gray-700 text-sm font-bold mb-2">Aantal kinderen:</label>
-        <input type="number" name="kinderen" min="0" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-green-500">
+        <input type="number" name="kinderen" min="0" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-green-500" value="0">
       </div>
       <!-- Aantal baby's -->
       <div class="mb-6" id="babyDiv">
         <label for="baby" class="block text-gray-700 text-sm font-bold mb-2">Aantal baby's:</label>
-        <input type="number" name="baby" min="0" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-green-500">
+        <input type="number" name="baby" min="0" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-green-500" value="0">
       </div>
       <!-- Verzenden knop -->
       <div class="flex items-center justify-center">
-        <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >
           Verzenden
         </button>
       </div>

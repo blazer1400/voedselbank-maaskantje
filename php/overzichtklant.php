@@ -55,14 +55,14 @@
   
   <div class="flex items-center justify-end mr-80 mb-4 mb-3">
     <button class="bg-green-800 border border-green-800 rounded px-3 py-2 hover:bg-green-500 hover:border-green-500">
-      <a href="../klanten/addklant.php" class="text-white font-mono">+ Klant</a>
+      <a href="../klanten/addklant.php" class="text-white font-mono">Voeg klant</a>
     </button>
   </div>
 
   <div class="flex justify-center items-start h-screen">
     <div class="p-5">
       <div class="overflow-auto rounded-lg shadow hidden md:block">
-        <table class="w-full">
+        <table class="w-full bg-white">
           <thead class="bg-gray-50 border-b-2 border-gray-200">
             <tr>
               <th class="p-3 text-sm font-semibold tracking-wide text-left">Naam</th>
@@ -90,6 +90,8 @@
                 echo "<td class='p-3'>" . $row['volwassen'] . "</td>";
                 echo "<td class='p-3'>" . $row['tieners'] . "</td>";
                 echo "<td class='p-3'>" . $row['babys'] . "</td>";
+                echo "<td class='p-3'><a href='../klanten/updateklant.php?id=" . $row['idklanten'] . "' class='text-blue-500 font-bold hover:bg-gray-200'>Update</a></td>";
+                echo "<td class='p-3'><a href='../klanten/deleteklant.php?id=" . $row['idklanten'] . "' class='text-red-500 font-bold  hover:bg-gray-200'>Delete</a></td>";
                 echo "</tr>";
               }
             } catch (PDOException $e) {

@@ -34,7 +34,7 @@ try {
     $stmt->execute();
 
     // je gaat terug als deze pagina als alles goed is gegaan
-    header("Location: overzichtproduct.php");
+    header("Location: ../php/overzichtproduct.php");
     exit;
   }
 } catch (PDOException $e) {

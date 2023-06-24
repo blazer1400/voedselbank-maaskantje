@@ -36,7 +36,7 @@ try {
     $stmt->execute();
 
     // gaat naar de pagina als de update en alles is goed gegaan
-    header('Location: overzichtproduct.php');
+    header('Location: ../php/overzichtproduct.php');
     exit();
   }
 
