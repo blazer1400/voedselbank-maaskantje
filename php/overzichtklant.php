@@ -59,9 +59,9 @@
     </button>
   </div>
 
-  <div class="flex justify-center items-start h-screen">
+  <div class="flex justify-center items-start">
     <div class="p-5">
-      <div class="overflow-auto rounded-lg shadow hidden md:block">
+      <div class="overflow-auto rounded-lg shadow hidden md:block ">
         <table class="w-full bg-white">
           <thead class="bg-gray-50 border-b-2 border-gray-200">
             <tr>
@@ -82,16 +82,16 @@
               // zorgt ervoor dat je de data zit in de table
               foreach ($result as $row) {
                 echo "<tr>";
-                echo "<td class='p-3'>" . $row['gezinsnaam'] . "</td>";
-                echo "<td class='p-3'>" . $row['adres'] . "</td>";
-                echo "<td class='p-3'>" . $row['telefoonnummer'] . "</td>";
-                echo "<td class='p-3'>" . $row['email'] . "</td>";
-                echo "<td class='p-3'>" . $row['wensen'] . "</td>";
-                echo "<td class='p-3'>" . $row['volwassen'] . "</td>";
-                echo "<td class='p-3'>" . $row['tieners'] . "</td>";
-                echo "<td class='p-3'>" . $row['babys'] . "</td>";
-                echo "<td class='p-3'><a href='../klanten/updateklant.php?id=" . $row['idklanten'] . "' class='text-blue-500 font-bold hover:bg-gray-200'>Update</a></td>";
-                echo "<td class='p-3'><a href='../klanten/deleteklant.php?id=" . $row['idklanten'] . "' class='text-red-500 font-bold  hover:bg-gray-200'>Delete</a></td>";
+                echo "<td class='p-3 text-sm text-gray-700 whitespace-nowrap'>" . $row['gezinsnaam'] . "</td>";
+                echo "<td class='p-3 text-sm text-gray-700 whitespace-nowrap'>" . $row['adres'] . "</td>";
+                echo "<td class='p-3 text-sm text-gray-700 whitespace-nowrap'>" . $row['telefoonnummer'] . "</td>";
+                echo "<td class='p-3 text-sm text-gray-700 whitespace-nowrap'>" . $row['email'] . "</td>";
+                echo "<td class='p-3 text-sm text-gray-700 whitespace-nowrap'>" . $row['wensen'] . "</td>";
+                echo "<td class='p-3 text-sm text-gray-700 whitespace-nowrap'>" . $row['volwassen'] . "</td>";
+                echo "<td class='p-3 text-sm text-gray-700 whitespace-nowrap'>" . $row['tieners'] . "</td>";
+                echo "<td class='p-3 text-sm text-gray-700 whitespace-nowrap'>" . $row['babys'] . "</td>";
+                echo "<td class='p-3 text-sm text-gray-700 whitespace-nowrap'><a href='../klanten/updateklant.php?id=" . $row['idklanten'] . "' class='text-blue-500 font-bold hover:bg-gray-200'>Update</a></td>";
+                echo "<td class='p-3 text-sm text-gray-700 whitespace-nowrap'><a href='../klanten/deleteklant.php?id=" . $row['idklanten'] . "' class='text-red-500 font-bold  hover:bg-gray-200'>Delete</a></td>";
                 echo "</tr>";
               }
             } catch (PDOException $e) {
