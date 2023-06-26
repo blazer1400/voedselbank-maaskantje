@@ -39,7 +39,7 @@ if ($query) {
 
     $_SESSION['message'] = 'Voedselpakket aangemaakt';
 
-    header('location: '); // TODO zet hier nog ff de file van het voedselpakket overzicht
+    header('location: overzichtVoedselPakket.php '); // TODO zet hier nog ff de file van het voedselpakket overzicht
 } else {
     die($dbConnection->error);
 }

@@ -38,7 +38,7 @@
       <div class="text-center mx-auto">
         <h1 class="text-6xl font-semibold">Welkom bij Voedselbank Maaskantje</h1>
         <p class="font-light text-3xl mt-5">Waar iedereen recht heeft op een stukje vlees</p>
-        <a class="px-5 py-2 inline-block bg-green-500 text-white hover:bg-green-400 transition-colors mt-10 rounded" href="overzichtvoedselpakket.php">
+        <a class="px-5 py-2 inline-block bg-green-500 text-white hover:bg-green-400 transition-colors mt-10 rounded" href="overzichtVoedselPakket.php">
            Stel pakket samen
         </a>
       </div>
