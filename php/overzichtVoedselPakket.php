@@ -64,7 +64,7 @@ try {
   
   <div class="flex items-center justify-end mr-80 mb-4 mb-3">
     <button class="bg-green-800 border border-green-800 rounded px-3 py-2 hover:bg-green-500 hover:border-green-500">
-      <a href="../voedselpakket-aanmaken" class="text-white font-mono">Voeg klant</a>
+      <a href="../voedselpakket-aanmaken" class="text-white font-mono">Voeg Voedselpakket</a>
     </button>
   </div>
     <div class="container mx-auto p-8">
