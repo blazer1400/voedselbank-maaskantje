@@ -99,7 +99,7 @@ try {
               <?php foreach ($products as $product): ?>
                 <tr class="bg-white hover:bg-gray-100 cursor-pointer" onclick="window.location.href = '../productvoorraad/updateproduct.php?id=<?= $product['EAN Nummer']; ?>'">
                   <td class="w-16 p-3 text-sm text-gray-700 whitespace-nowrap">
-                    <a href="../php/updateproduct.php?id=<?= $product['EAN Nummer']; ?>">
+                    <a href="../productvoorraad/updateproduct.php?id=<?= $product['EAN Nummer']; ?>">
                       Update
                     </a>
                   </td>

@@ -122,7 +122,7 @@ try {
           <div class="bg-white space-y-3 p-4 rounded-lg shadow">
             <div class="flex items-center space-x-2 text-sm">
               <div class="text-sm font-medium text-black">
-                <a href="../php/updateproduct.php?id=<?= $product['EAN Nummer']; ?>" class="text-green-500 hover:underline">
+                <a href="../productvoorraad/updateproduct.php?id=<?= $product['EAN Nummer']; ?>" class="text-green-500 hover:underline">
                   Update
                 </a>
               </div>
