@@ -38,7 +38,7 @@
 
       <!-- Navbar Menu -->
       <nav class="flex flex-row gap-5">
-        <a href="Homepage.php">Home</a>
+        <a href="../php/Homepage.php">Home</a>
         <a href="../php/overzichtproduct.php">Productvoorraad</a>
         <a href="../leveranciers/index.php">Leveranciers</a>
         <a href="../php/overzichtklant.php">klanten</a>
