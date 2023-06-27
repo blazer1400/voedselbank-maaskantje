@@ -21,7 +21,7 @@
         session_start();
 
         if (!empty($_SESSION['user'])) {
-            header('location: ./dashboard.php');
+            header('location: ./php/Homepage.php');
         }
 
         if (!empty($_SESSION['error'])) {
