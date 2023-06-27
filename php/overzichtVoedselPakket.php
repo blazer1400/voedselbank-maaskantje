@@ -102,7 +102,7 @@ function isDatumUitgifteIngesteld($pakketnummer, $voedselpakketen)
                     <?php foreach ($voedselpakketen as $pakket): ?>
                         <tr>
                             <td class="p-4"><?php echo $pakket['Pakketnummer']; ?></td>
-                            <td class="p-4"><?php echo $pakket['Datum sammenstelling']; ?></td>
+                            <td class="p-4"><?php echo $pakket['Datum samenstelling']; ?></td>
                             <td class="p-4 date-cell">
                                 <!--  datum van uitgifte al is ingesteld voor het huidige voedselpakket -->
                                 <?php if (!isDatumUitgifteIngesteld($pakket['Pakketnummer'], $voedselpakketen)): ?>
@@ -143,9 +143,13 @@ function isDatumUitgifteIngesteld($pakketnummer, $voedselpakketen)
                                     //                 }
                                     //      echo implode(", ", $productnamen);
 
-                                    $query = $conn->query("SELECT * FROM voedselpakketen_has_productvoorraad WHERE `voedselpakketen_Pakketnummer`='" . $pakket['Pakketnummer'] . '");
+                                    require('dbConnection.php');
+
+                                    $query = $dbConnection->query("SELECT * FROM voedselpakketen_has_productvoorraad WHERE `voedselpakketen_Pakketnummer` = '" . $pakket['Pakketnummer'] . "'");
                                     while ($row = $query->fetch_assoc()) {
-                                        print_r($row)
+                                        $product_query = $dbConnection->query("SELECT Productnaam FROM productvoorraad WHERE `EAN Nummer` = '" . $row['productvoorraad_EAN Nummer'] . "' ");
+                                        $result = $product_query->fetch_assoc();
+                                        echo $result['Productnaam'] . ", ";
                                     }
                             ?>
                         </td>
