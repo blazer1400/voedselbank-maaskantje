@@ -4,7 +4,7 @@
     <title>Overzicht gebruikers</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-green-200 w-full">
 <header class="bg-green-200 w-full">
 
     <?php
@@ -24,14 +24,29 @@
     }
     ?>
     <!-- Nav Bar met een zoekbalk -->
-    <nav class="bg-green-200 text-white flex flex-col sm:flex-row justify-between items-center py-3 px-5">
-        <div class="flex items-center">
-            <h1 class="text-2xl sm:text-xl font-bold text-green-500">Maaskantje</h1>
-            <a href="/" class="text-lg sm:text-base text-green-500 font-bold py-2 px-5 rounded hover:underline">
-                Home
-            </a>
-
+  <!-- Navbar -->
+  <div class="flex items-center h-20">
+    <!-- Navbar Container -->
+    <div class="mx-auto relative px-5 max-w-screen-xl w-full flex flex-wrap items-center justify-end">
+      <!-- Navbar Logo -->
+      <div class="absolute left-0 flex flex-row">
+        <img class="h-10 hidden md:inline-block" src="../img/imghome/Logo.png" alt="het logo van voedselbank maaskantje">
+        <div class="text-3xl font-light uppercase ml-2">
+          <span class="hidden md:inline-block">Maaskantje</span>
         </div>
+      </div>
+
+      <!-- Navbar Menu -->
+      <nav class="flex flex-row gap-5">
+        <a href="Homepage.php">Home</a>
+        <a href="../php/overzichtproduct.php">Productvoorraad</a>
+        <a href="../leveranciers/index.php">Leveranciers</a>
+        <a href="../php/overzichtklant.php">klanten</a>
+        <a href="../gebruikers/index.php">Gebruikers</a>
+        <a class=" px-2 py-1 inline-block bg-green-500 text-white hover:bg-green-400 transition-colors  rounded" href="#">Log in</a>
+      </nav>
+    </div>
+  </div>
 
 
         <div class="flex items-center space-x-5 mt-4 sm:mt-0">

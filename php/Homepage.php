@@ -28,6 +28,7 @@
           <a href="overzichtproduct.php">Productvoorraad</a>
           <a href="../leveranciers/index.php">Leveranciers</a>
           <a href="overzichtklant.php">klanten</a>
+          <a href="../gebruikers/index.php">Gebruikers</a>
           <a class=" px-2 py-1 inline-block bg-green-500 text-white hover:bg-green-400 transition-colors  rounded" href="../index.php">Log in</a>
         </nav>
       </div>
