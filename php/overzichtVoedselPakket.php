@@ -98,11 +98,13 @@ function isDatumUitgifteIngesteld($pakketnummer, $voedselpakketen)
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- dat alle info van de database in de table wordt gezet -->
                     <?php foreach ($voedselpakketen as $pakket): ?>
                         <tr>
                             <td class="p-4"><?php echo $pakket['Pakketnummer']; ?></td>
                             <td class="p-4"><?php echo $pakket['Datum sammenstelling']; ?></td>
                             <td class="p-4 date-cell">
+                                <!--  datum van uitgifte al is ingesteld voor het huidige voedselpakket -->
                                 <?php if (!isDatumUitgifteIngesteld($pakket['Pakketnummer'], $voedselpakketen)): ?>
                                     <form method="POST" action="../voedselpakket/DatumUitgifte.php">
                                         <input type="hidden" name="id" value="<?php echo $pakket['Pakketnummer']; ?>">
@@ -116,6 +118,8 @@ function isDatumUitgifteIngesteld($pakketnummer, $voedselpakketen)
                             </td>
                             <td class="p-4"><?php echo $pakket['Aantal producten']; ?></td>
                             <td class="p-4">
+                                <!-- de gezinsnaam die is gekoppeld aan het specifieke klant-ID 
+                                van het huidige voedselpakket en geeft deze weer -->
                                 <?php
                                 $gezinsnaam = "";
                                 foreach ($klanten as $klant) {
@@ -127,17 +131,20 @@ function isDatumUitgifteIngesteld($pakketnummer, $voedselpakketen)
                                 echo $gezinsnaam;
                                 ?>
                             </td>
+                            <!-- namen van de producten op die zijn gekoppeld aan het huidige voedselpakketnummer  
+                            geeft ze weer als een enkele string gescheiden door kommas -->
                             <td class="p-4">
-                                <?php
-                                $productnamen = [];
-                                foreach ($productvoorraad as $product) {
-                                    if ($product['EAN Nummer'] === $pakket['Pakketnummer']) {
-                                        $productnamen[] = $product['Productnaam'];
-                                    }
-                                }
-                                echo implode(", ", $productnamen);
-                                ?>
-                            </td>
+                            <?php
+                                    $productnamen = [];
+                                                    foreach ($productvoorraad as $product) {
+                                                    if ($product['EAN Nummer'] === $pakket['Pakketnummer']) {
+                                                    $productnamen[] = $product['Productnaam'];
+                                            }
+                                                    }
+                                         echo implode(", ", $productnamen);
+                            ?>
+                        </td>
+                            <!-- knop dat het voedselpakket uit de database wordt verwijderd -->
                             <td class="p-4">
                                 <a href="../voedselpakket/DeleteVoedselpakket.php?id=<?php echo $pakket['Pakketnummer']; ?>"
                                     class="text-red-500 hover:underline">Delete</a>
