@@ -9,7 +9,7 @@
         }
     </style>
 </head>
-<body>
+<body class="bg-green-200 w-full">
 <header class="bg-green-200 w-full">
 
     <?php
@@ -32,7 +32,7 @@
     <nav class="bg-green-200 text-white flex flex-col sm:flex-row justify-between items-center py-3 px-5">
         <div class="flex items-center">
             <h1 class="text-2xl sm:text-xl font-bold text-green-500">Maaskantje</h1>
-            <a href="/" class="text-lg sm:text-base text-green-500 font-bold py-2 px-5 rounded hover:underline">
+            <a href="../php/homepage.php" class="text-lg sm:text-base text-green-500 font-bold py-2 px-5 rounded hover:underline">
                 Home
             </a>
 
