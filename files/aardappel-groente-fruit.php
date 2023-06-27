@@ -57,25 +57,7 @@ try {
             <span class="hidden md:inline-block">Maaskantje</span>
           </div>
         </div>
-    <div class="flex items-center flex-grow sm:flex-initial sm:ml-5 space-x-0 mt-4 sm:mt-0 flex-1 mr-20">
-      <form method="GET" action="">
-        <div class="flex justify-center">
-          <input type="text" name="search" placeholder="Zoek EAN..." class="px-4 py-2 border border-gray-300 rounded-l text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent" value="<?= $search ?>">
-          <button type="submit" class="px-4 py-2 bg-green-500 text-white rounded-l-none rounded-r">Zoek</button>
-        </div>
-      </form>
-    </div>
-<!-- Navbar Menu -->
-        <nav class="flex flex-row gap-5">
-          <a href="../php/Homepage.php">Home</a>
-          <a href="../php/overzichtproduct.php">Productvoorraad</a>
-          <a href="#">Leveranciers</a>
-          <a href="../php/overzichtklant.php">klanten</a>
-          <a class=" px-2 py-1 inline-block bg-green-500 text-white hover:bg-green-400 transition-colors  rounded" href="#">Log in</a>
-        </nav>
-      </div>
-    </div>
-</header>
+        </header>
 <body class="bg-green-200 w-full h-screen">
   <div class="flex items-center justify-end mr-10">
    
