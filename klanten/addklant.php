@@ -6,10 +6,10 @@ $username = 'root';
 $password = '';
 
 try {
-  // Maakt een nieuwe PDO-verbinding
+  // Maakt een nieuwe PDO verbinding
   $db = new PDO("mysql:host=$host;dbname=$dbName;charset=utf8", $username, $password);
 
-  // Stel de PDO-foutmodus in op uitzondering
+  // Stel de PDO foutmodus in op uitzondering
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -42,7 +42,7 @@ try {
     // Bereid de SQL-query voor om klanten toe te voegen
     $stmt = $db->prepare("INSERT INTO `klanten`(`idklanten`, `gezinsnaam`, `adres`, `telefoonnummer`, `email`, `wensen`, `volwassen`, `tieners`, `babys`) VALUES (null,:gezinsnaam,:adres,:tel,:email,:wensen,:volwassen,:kinderen,:baby )");
 
-    // Bind de parameters
+ 
     $stmt->bindParam(':gezinsnaam', $gezinsnaam);
     $stmt->bindParam(':adres', $adres);
     $stmt->bindParam(':tel', $tel);
@@ -55,7 +55,7 @@ try {
     // Voer de SQL-query uit
     $stmt->execute();
 
-    // Ga terug naar de overzichtklant.php pagina als alles goed is gegaan
+    // ga terug naar de goede pagina
     header("Location: ../php/overzichtklant.php");
     exit;
   }
