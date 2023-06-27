@@ -22,7 +22,7 @@ foreach($_POST as $key => $item) {
     }
 }
 
-$query = $dbConnection->query("INSERT INTO voedselpakketen (`Datum samenstelling`, `Aantal producten`, `id_klant`)"
+$query = $dbConnection->query("INSERT INTO voedselpakketen (`Datum sammenstelling`, `Aantal producten`, `id_klant`)"
     . " VALUES ('" . date('Y-m-d') . "', '" . $amount . "', '" . $_POST['id_klant'] . "')");
 if ($query) {
     $id_query = $dbConnection->query('SELECT LAST_INSERT_ID()');

@@ -110,7 +110,7 @@ require('dbConnection.php');
                                 <?php if (!isDatumUitgifteIngesteld($pakket['Pakketnummer'], $voedselpakketen)): ?>
                                     <form method="POST" action="../voedselpakket/DatumUitgifte.php">
                                         <input type="hidden" name="id" value="<?php echo $pakket['Pakketnummer']; ?>">
-                                        <button name="dateButton" class="bg-green-800 border border-green-800 rounded px-3 py-2 hover:bg-green-500 hover:border-green-500">
+                                        <button name="dateButton" class="bg-green-800 border border-green-800 text-white rounded px-3 py-2 hover:bg-green-500 hover:border-green-500">
                                             Datum
                                         </button>
                                     </form>

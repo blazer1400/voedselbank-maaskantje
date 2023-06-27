@@ -65,7 +65,7 @@ try {
         </div>
       </form>
     </div>
-
+</header>
 <body class="bg-green-200 w-full h-screen">
 
   <div class="flex justify-center items-start h-screen">
