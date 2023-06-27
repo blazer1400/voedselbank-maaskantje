@@ -135,13 +135,18 @@ function isDatumUitgifteIngesteld($pakketnummer, $voedselpakketen)
                             geeft ze weer als een enkele string gescheiden door kommas -->
                             <td class="p-4">
                             <?php
-                                    $productnamen = [];
-                                                    foreach ($productvoorraad as $product) {
-                                                    if ($product['EAN Nummer'] === $pakket['Pakketnummer']) {
-                                                    $productnamen[] = $product['Productnaam'];
-                                            }
-                                                    }
-                                         echo implode(", ", $productnamen);
+                                    // $productnamen = [];
+                                    //                 foreach ($productvoorraad as $product) {
+                                    //                 if ($product['EAN Nummer'] === $pakket['Pakketnummer']) {
+                                    //                 $productnamen[] = $product['Productnaam'];
+                                    //         }
+                                    //                 }
+                                    //      echo implode(", ", $productnamen);
+
+                                    $query = $conn->query("SELECT * FROM voedselpakketen_has_productvoorraad WHERE `voedselpakketen_Pakketnummer`='" . $pakket['Pakketnummer'] . '");
+                                    while ($row = $query->fetch_assoc()) {
+                                        print_r($row)
+                                    }
                             ?>
                         </td>
                             <!-- knop dat het voedselpakket uit de database wordt verwijderd -->
