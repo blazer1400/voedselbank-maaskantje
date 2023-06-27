@@ -66,16 +66,6 @@ try {
         </div>
       </form>
     </div>
-<!-- Navbar Menu -->
-        <nav class="flex flex-row gap-5">
-          <a href="../php/Homepage.php">Home</a>
-          <a href="../php/overzichtproduct.php">Productvoorraad</a>
-          <a href="#">Leveranciers</a>
-          <a href="../php/overzichtklant.php">klanten</a>
-          <a class=" px-2 py-1 inline-block bg-green-500 text-white hover:bg-green-400 transition-colors  rounded" href="#">Log in</a>
-        </nav>
-      </div>
-    </div>
 </header>
 <body class="bg-green-200 w-full h-screen">
   
