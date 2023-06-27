@@ -27,6 +27,18 @@ try {
     echo "Connection failed: " . $e->getMessage();
     exit;
 }
+
+// Controleer of de datum van uitgifte al is ingesteld voor het huidige voedselpakket
+function isDatumUitgifteIngesteld($pakketnummer, $voedselpakketen)
+{
+    foreach ($voedselpakketen as $pakket) {
+        if ($pakket['Pakketnummer'] === $pakketnummer) {
+            return $pakket['Datum uitgifte'] !== null;
+        }
+    }
+    return false;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -83,7 +95,6 @@ try {
                         <th class="p-4 text-left">Aantal producten</th>
                         <th class="p-4 text-left">Gezinsnaam</th>
                         <th class="p-4 text-left">Producten</th>
-                        
                     </tr>
                 </thead>
                 <tbody>
@@ -91,7 +102,18 @@ try {
                         <tr>
                             <td class="p-4"><?php echo $pakket['Pakketnummer']; ?></td>
                             <td class="p-4"><?php echo $pakket['Datum sammenstelling']; ?></td>
-                            <td class="p-4 date-cell"><?php echo $pakket['Datum uitgifte']; ?></td>
+                            <td class="p-4 date-cell">
+                                <?php if (!isDatumUitgifteIngesteld($pakket['Pakketnummer'], $voedselpakketen)): ?>
+                                    <form method="POST" action="../voedselpakket/DatumUitgifte.php">
+                                        <input type="hidden" name="id" value="<?php echo $pakket['Pakketnummer']; ?>">
+                                        <button name="dateButton" class="bg-green-800 border border-green-800 rounded px-3 py-2 hover:bg-green-500 hover:border-green-500">
+                                            Datum
+                                        </button>
+                                    </form>
+                                <?php else: ?>
+                                    <?php echo $pakket['Datum uitgifte']; ?>
+                                <?php endif; ?>
+                            </td>
                             <td class="p-4"><?php echo $pakket['Aantal producten']; ?></td>
                             <td class="p-4">
                                 <?php
@@ -109,7 +131,7 @@ try {
                                 <?php
                                 $productnamen = [];
                                 foreach ($productvoorraad as $product) {
-                                    if ($product['Pakketnummer'] === $pakket['Pakketnummer']) {
+                                    if ($product['EAN Nummer'] === $pakket['Pakketnummer']) {
                                         $productnamen[] = $product['Productnaam'];
                                     }
                                 }
@@ -117,7 +139,7 @@ try {
                                 ?>
                             </td>
                             <td class="p-4">
-                                <a href="DeleteVoedselpakket.php?id=<?php echo $pakket['Pakketnummer']; ?>"
+                                <a href="../voedselpakket/DeleteVoedselpakket.php?id=<?php echo $pakket['Pakketnummer']; ?>"
                                     class="text-red-500 hover:underline">Delete</a>
                             </td>
                         </tr>
@@ -126,18 +148,6 @@ try {
             </table>
         </div>
     </div>
-
-    <script>
-        // als klikt op datum uitgifte krijg je de actuele datum 
-        const dateCells = document.querySelectorAll('.date-cell');
-        dateCells.forEach(cell => {
-            cell.addEventListener('click', () => {
-                const currentDate = new Date();
-                const formattedDate = currentDate.toISOString().split('T')[0];
-                cell.textContent = formattedDate;
-            });
-        });
-    </script>
 </body>
 
 </html>

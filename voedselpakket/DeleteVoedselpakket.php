@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
     $stmt->bindParam(':id', $id);
     $stmt->execute();
 
-    header("Location: overzichtVoedselPakket.php");
+    header("Location: ../php/overzichtVoedselPakket.php");
     exit;
   } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
